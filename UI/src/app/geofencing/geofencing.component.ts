@@ -3,7 +3,7 @@ import { AgmMap, GoogleMapsAPIWrapper, LatLngLiteral, LatLng, MarkerManager, Inf
 import { Polygon, GoogleMap } from '@agm/core/services/google-maps-types';
 import { GeofencingService } from './geofencing.service';
 import { AddressSearchResult } from './geofencing.model';
-import {GMapModule} from 'primeng/gmap';
+
 
 @Component({
   selector: 'app-geofencing',
@@ -1223,7 +1223,7 @@ export class GeofencingComponent implements OnInit {
   mapReference: any;
 
   @ViewChild("myMap") myMap: AgmMap;
-  
+
   constructor(
     public googleMapsAPIWrapper: GoogleMapsAPIWrapper, 
     public geofencingService: GeofencingService,
@@ -1231,7 +1231,7 @@ export class GeofencingComponent implements OnInit {
     public infoWindowManager: InfoWindowManager,
     private ref: ChangeDetectorRef,) {}
 
-    ngOnInit() {
+  ngOnInit() {
     let loc: LatLngLiteral = {lat: -34.397, lng: 150.644};
 
     this.googleMapsAPIWrapper.createPolygon({
@@ -1242,8 +1242,9 @@ export class GeofencingComponent implements OnInit {
 
     this.lat = this.defaultLat;
     this.lng = this.defaultLng;
+  
    
- }
+  }
 
 
   filterAddress(event) {

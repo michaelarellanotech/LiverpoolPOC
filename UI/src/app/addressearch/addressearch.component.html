@@ -1,3 +1,24 @@
-<p>
-  addressearch works!
-</p>
+<div class="p-grid">
+  <p-card class="p-col-12">
+    <div class="ui-fluid">
+        <label class="field-label" for="addresssearch">Address Search</label>
+        <p-autoComplete id="addresssearch" name="addresssearch" 
+          [(ngModel)]="address" [suggestions]="filteredAddress" 
+          [minLength]="4"
+          (completeMethod)="filterAddress($event)" field="displayLine" [size]="500"
+          (onSelect)="onSelect($event)"
+          placeholder="Type your street address..."
+          forceSelection="true"></p-autoComplete>
+      <div style="padding: 5px;"></div>
+      <p-message *ngIf="completedSearch && geocodeAddress.isInWesternSydney" severity="success" text="Your Local Health District is Western Sydney."></p-message>  
+      <p-message *ngIf="completedSearch && !geocodeAddress.isInWesternSydney" severity="error" text="Your Local Health District is *NOT* Western Sydney."></p-message>  
+    </div>
+  </p-card>
+  <p-card class="p-col-12">
+
+  <p-gmap #gmap
+    [options]="options" 
+    [style]="{'width':'100%','height':'500px'}" 
+    [overlays]="overlays"></p-gmap>
+</p-card>
+</div>

@@ -105,6 +105,7 @@ import { GeofencingComponent } from './geofencing/geofencing.component';
 import { AgmCoreModule, GoogleMapsAPIWrapper, MarkerManager, InfoWindowManager } from '@agm/core';
 import { AddressearchComponent } from './addressearch/addressearch.component';
 import { GeofencingService } from './geofencing/geofencing.service';
+import {GMapModule} from 'primeng/gmap';
 
 @NgModule({
     imports: [
@@ -135,6 +136,7 @@ import { GeofencingService } from './geofencing/geofencing.service';
         FileUploadModule,
         FullCalendarModule,
         GalleriaModule,
+        GMapModule,
         GrowlModule,
         InplaceModule,
         InputMaskModule,

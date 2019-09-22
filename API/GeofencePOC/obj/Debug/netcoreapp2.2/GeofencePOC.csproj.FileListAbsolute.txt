@@ -1,0 +1,14 @@
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\bin\Debug\netcoreapp2.2\GeofencePOC.deps.json
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\bin\Debug\netcoreapp2.2\GeofencePOC.runtimeconfig.json
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\bin\Debug\netcoreapp2.2\GeofencePOC.runtimeconfig.dev.json
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\bin\Debug\netcoreapp2.2\GeofencePOC.dll
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\bin\Debug\netcoreapp2.2\GeofencePOC.pdb
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.csprojAssemblyReference.cache
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.csproj.CoreCompileInputs.cache
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.RazorAssemblyInfo.cache
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.RazorAssemblyInfo.cs
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.AssemblyInfoInputs.cache
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.AssemblyInfo.cs
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.RazorTargetAssemblyInfo.cache
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.dll
+C:\Development\GeofencingPrimeNG\API\GeofencePOC\obj\Debug\netcoreapp2.2\GeofencePOC.pdb

@@ -16,7 +16,7 @@
   </p-card>
   <p-card class="p-col-12">
 
-
+   
    <agm-map #myMap [latitude]="lat" [longitude]="lng" [zoom]="zoom" [usePanning]="true" 
       (mapReady)=mapReady($event)>
       <agm-polygon name="myPolygon" [paths]="polygonPaths"
