@@ -1,0 +1,6 @@
+C:\Development\GeofencingPrimeNG\API\EF\bin\Debug\netcoreapp2.2\EF.deps.json
+C:\Development\GeofencingPrimeNG\API\EF\bin\Debug\netcoreapp2.2\EF.dll
+C:\Development\GeofencingPrimeNG\API\EF\obj\Debug\netcoreapp2.2\EF.csprojAssemblyReference.cache
+C:\Development\GeofencingPrimeNG\API\EF\obj\Debug\netcoreapp2.2\EF.csproj.CoreCompileInputs.cache
+C:\Development\GeofencingPrimeNG\API\EF\obj\Debug\netcoreapp2.2\EF.AssemblyInfoInputs.cache
+C:\Development\GeofencingPrimeNG\API\EF\obj\Debug\netcoreapp2.2\EF.AssemblyInfo.cs

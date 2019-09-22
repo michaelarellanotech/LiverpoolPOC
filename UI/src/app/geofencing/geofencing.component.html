@@ -1,0 +1,31 @@
+<div class="p-grid">
+  <p-card class="p-col-12">
+    <div class="ui-fluid">
+        <label class="field-label" for="addresssearch">Address search</label>
+        <p-autoComplete id="addresssearch" name="addresssearch" 
+          [(ngModel)]="address" [suggestions]="filteredAddress" 
+          [minLength]="4"
+          (completeMethod)="filterAddress($event)" field="displayLine" [size]="500"
+          (onSelect)="onSelect($event)"
+          placeholder="Type your street address..."
+          forceSelection="true"></p-autoComplete>
+      <!-- <p>{{geocodeAddress | json}}</p> -->
+      <p-message *ngIf="completedSearch && geocodeAddress.isInWesternSydney" severity="success" text="Your Local Health District is Western Sydney."></p-message>  
+      <p-message *ngIf="completedSearch && !geocodeAddress.isInWesternSydney" severity="error" text="Your Local Health District is *NOT* Western Sydney."></p-message>  
+    </div>
+  </p-card>
+  <p-card class="p-col-12">
+
+
+   <agm-map #myMap [latitude]="lat" [longitude]="lng" [zoom]="zoom" [usePanning]="true" 
+      (mapReady)=mapReady($event)>
+      <agm-polygon name="myPolygon" [paths]="polygonPaths"
+        fillColor="#ff6666"
+        strokeColor="#cc3366"></agm-polygon>
+      <agm-marker [latitude]="markerLat" [longitude]="markerLng">
+          <agm-info-window>{{ geocodeAddress.displayLine }}</agm-info-window>
+      </agm-marker>
+    </agm-map>
+   
+  </p-card>
+</div>
