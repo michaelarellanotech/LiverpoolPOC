@@ -37,8 +37,8 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     ngOnInit() {
         this.model = [
             { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/']},
-            { label: 'Address Search', icon: 'pi pi-fw pi-globe', routerLink: ['/addresssearch']},
-            { label: 'Geofencing', icon: 'pi pi-fw pi-globe', routerLink: ['/geofencing']},
+            { label: 'Geofencing', icon: 'pi pi-fw pi-globe', routerLink: ['/addresssearch']},
+            // { label: 'Geofencing', icon: 'pi pi-fw pi-globe', routerLink: ['/geofencing']},
             {
                 label: 'Layouts', icon: 'pi pi-fw pi-th-large',
                 items: [
