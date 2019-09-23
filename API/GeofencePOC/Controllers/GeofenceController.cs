@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
 namespace GeofencePOC.Controllers
@@ -14,12 +15,14 @@ namespace GeofencePOC.Controllers
     [ApiController]
     public class GeofenceController : ControllerBase
     {
+        private string _connectionString;
         private readonly IHttpClientFactory _clientFactory;
         private const string _serviceURL = "https://kleber-devuat.datatoolscloud.net.au/KleberWebService/DtKleberService.svc/";
         private const string _serviceRequestKey = "RK-66790-25DAF-5E733-BDF40-35FDA-1BBD8-D9C89-FA1A6";
-        public GeofenceController(IHttpClientFactory clientFactory)
+        public GeofenceController(IHttpClientFactory clientFactory, IConfiguration configuration)
         {
             _clientFactory = clientFactory;
+            _connectionString = configuration.GetConnectionString("conn");
         }
 
         // GET api/values
@@ -97,8 +100,6 @@ namespace GeofencePOC.Controllers
             return Ok(singleResult);
         }
 
-        private string connectionString =
-            "Server=MD-R90Q8NH0\\LOCALSQL;Database=Liverpool;User Id=sa;Password=sa;";
 
         private bool IsInWesternSydney(string longitude, string latitude)
         {
@@ -110,7 +111,7 @@ namespace GeofencePOC.Controllers
             parameterLongitude.Value = longitude;
             parameterLatitude.Value = latitude;
 
-            var oValue = SqlHelper.ExecuteScalar(connectionString, commandText, CommandType.StoredProcedure, parameterLongitude, parameterLatitude);
+            var oValue = SqlHelper.ExecuteScalar(_connectionString, commandText, CommandType.StoredProcedure, parameterLongitude, parameterLatitude);
             Int32 result;
             if (Int32.TryParse(oValue.ToString(), out result))
             {

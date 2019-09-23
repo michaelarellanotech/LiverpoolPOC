@@ -9,7 +9,8 @@
           (completeMethod)="filterAddress($event)" field="displayLine" [size]="500"
           (onSelect)="onSelect($event)"
           placeholder="Type your street address..."
-          forceSelection="true"></p-autoComplete>
+          forceSelection="true"
+          scrollHeight="320px"></p-autoComplete>
           <div style="padding: 5px;"></div>
       <p-message *ngIf="completedSearch && geocodeAddress.isInWesternSydney" severity="success" text="Your Local Health District is Western Sydney."></p-message>  
       <p-message *ngIf="completedSearch && !geocodeAddress.isInWesternSydney" severity="error" text="Your Local Health District is *NOT* Western Sydney."></p-message>  

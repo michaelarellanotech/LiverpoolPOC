@@ -12,7 +12,8 @@ export class GeofencingComponent implements OnInit {
   filteredAddress: AddressSearchResult[];
   geocodeAddress: AddressSearchResult = new AddressSearchResult();
   completedSearch: boolean = false;
-
+  address: any;
+  
   constructor(
     public geofencingService: GeofencingService,
     ) {}
