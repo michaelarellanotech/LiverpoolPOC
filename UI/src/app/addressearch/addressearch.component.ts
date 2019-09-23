@@ -12,8 +12,8 @@ declare var google: any;
 })
 export class AddressearchComponent implements OnInit {
 
-  defaultLat = -33.68719;
-  defaultLng = 150.93556;
+  defaultLat = -34.22315;
+  defaultLng = 150.48798;
   markerLng = 0;
   markerLat = 0;
 
@@ -4801,18 +4801,12 @@ export class AddressearchComponent implements OnInit {
 
   @ViewChild("gmap") gmap: GMap;
 
-  constructor(
-    public geofencingService: GeofencingService,
-    //public googleMapsAPIWrapper: GoogleMapsAPIWrapper, 
-    //public markerManager: MarkerManager, 
-    //public infoWindowManager: InfoWindowManager,
-    //private ref: ChangeDetectorRef,
-    ) {}
+  constructor(public geofencingService: GeofencingService) {}
 
   ngOnInit() {
     this.options = {
       center: {lat: this.defaultLat, lng: this.defaultLng},
-      zoom: 10
+      zoom: 8.5
     };
   
     this.overlays = [
@@ -4845,7 +4839,7 @@ export class AddressearchComponent implements OnInit {
         this.geocodeAddress = data;
         this.markerLng = +this.geocodeAddress.longitude;
         this.markerLat = +this.geocodeAddress.latitude;
-        console.log(this.markerLng);
+        
         this.addressMarker = new google.maps.Marker({position: { lat: this.markerLat, lng: this.markerLng }, title: this.geocodeAddress.displayLine});
         this.overlays.pop();
         this.overlays.push(this.addressMarker);
@@ -4854,7 +4848,8 @@ export class AddressearchComponent implements OnInit {
 
         google.maps.event.trigger(this.gmap.map, "resize");
 
-      } else 
+      } 
+      else 
       {
         this.markerLng = 0;
         this.markerLat = 0;

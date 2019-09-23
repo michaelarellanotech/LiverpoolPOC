@@ -32,7 +32,7 @@ namespace GeofencePOC.Controllers
         [HttpGet("autocomplete/{addressline}")]
         public async Task<ActionResult> GetAddress([FromRoute]string addressline)
         {
-            int limit = 20;
+            int limit = 10;
             string serviceRequestedQueryString = "{0}/ProcessQueryStringRequest?Method=DataTools.Capture.Address.Predictive.Gnaf.SearchAddress&AddressLine={1}&ResultLimit={2}&RequestKey={3}&OutputFormat=json";
 
             var qualifiedQueryString = string.Format(serviceRequestedQueryString, _serviceURL, addressline, limit, _serviceRequestKey);
