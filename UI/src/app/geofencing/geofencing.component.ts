@@ -13,7 +13,8 @@ export class GeofencingComponent implements OnInit {
   geocodeAddress: AddressSearchResult = new AddressSearchResult();
   completedSearch: boolean = false;
   address: any;
-  
+  blocked: boolean = false;
+
   constructor(
     public geofencingService: GeofencingService,
     ) {}
@@ -33,8 +34,8 @@ export class GeofencingComponent implements OnInit {
   }
 
   onSelect(event: AddressSearchResult) {
-
     this.completedSearch = false;
+    this.blocked = true;
 
     this.geofencingService.getGeocode(event.recordId, event.displayLine).subscribe((data:AddressSearchResult) => {
       
@@ -48,6 +49,17 @@ export class GeofencingComponent implements OnInit {
       } 
 
       this.completedSearch = true;
+      this.blocked = false;
     });
+  }
+
+  scrollToTop() {
+    window.scrollTo(0,0);
+  }
+
+  clearSearch() {
+    this.completedSearch = false;
+    this.geocodeAddress = null;
+    this.address = "";
   }
 }

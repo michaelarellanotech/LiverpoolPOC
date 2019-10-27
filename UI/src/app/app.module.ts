@@ -106,9 +106,14 @@ import { AgmCoreModule, GoogleMapsAPIWrapper, MarkerManager, InfoWindowManager }
 import { AddressearchComponent } from './addressearch/addressearch.component';
 import { GeofencingService } from './geofencing/geofencing.service';
 import {GMapModule} from 'primeng/gmap';
+import {BlockUIModule} from 'primeng/blockui';
+import { Training01Component } from './training01/training01.component';
+import { Directive01Directive } from './training01/directive01.directive';
+import { ParentComponent } from './training01/parent/parent.component';
 
 @NgModule({
     imports: [
+        BlockUIModule,
         BrowserModule,
         FormsModule,
         AppRoutes,
@@ -212,7 +217,10 @@ import {GMapModule} from 'primeng/gmap';
         AppAccessdeniedComponent,
         AppLoginComponent,
         GeofencingComponent,
-        AddressearchComponent
+        AddressearchComponent,
+        Training01Component,
+        Directive01Directive,
+        ParentComponent
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

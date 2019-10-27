@@ -1,16 +1,30 @@
+<p-blockUI [blocked]="blocked">
+    <ul class="loader">
+        <li class="dot-a"></li>
+        <li class="dot-b"></li>
+        <li class="dot-c"></li>
+        <li class="dot-d"></li>
+        <li class="dot-e"></li>
+        <li class="dot-f"></li>
+        <li class="dot-g"></li>
+        <li class="dot-h"></li>
+        <li class="dot-i"></li>
+      </ul>
+  </p-blockUI>
+<div class="p-grid">
 <div class="p-grid">
   <p-card class="p-col-12">
       <h1>LHD - South Western Sydney</h1>
     <div class="ui-fluid">
         <label class="field-label" for="addresssearch">Address search</label>
-        <p-autoComplete id="addresssearch" name="addresssearch" 
-          [(ngModel)]="address" [suggestions]="filteredAddress" 
-          [minLength]="4"
-          (completeMethod)="filterAddress($event)" field="displayLine" [size]="500"
-          (onSelect)="onSelect($event)"
-          placeholder="Type your street address..."
-          forceSelection="true"
-          scrollHeight="320px"></p-autoComplete>
+        <div class="ui-inputgroup">
+            <p-autoComplete id="addresssearch" name="addresssearch" [(ngModel)]="address" [suggestions]="filteredAddress"
+            [minLength]="4" (completeMethod)="filterAddress($event)" field="displayLine" [size]="500"
+            (onSelect)="onSelect($event)" placeholder="Type in your address e.g. 15 Cranberry St..." forceSelection="true"
+            (onFocus)="scrollToTop()"
+            ></p-autoComplete>
+            <button pButton type="button" icon="pi pi-times" class="ui-button-warn" (click)="clearSearch()"></button>      
+        </div>
           <div style="padding: 5px;"></div>
       <p-message *ngIf="completedSearch && geocodeAddress.isInWesternSydney" severity="success" text="Your Local Health District is Western Sydney."></p-message>  
       <p-message *ngIf="completedSearch && !geocodeAddress.isInWesternSydney" severity="error" text="Your Local Health District is *NOT* Western Sydney."></p-message>  

@@ -1,0 +1,32 @@
+<div class="p-grid ui-fluid">
+  <div class="p-col-6">
+    <p-panel header="Training" [toggleable]="true" [style]="{'margin-bottom':'20px'}">
+      <form #editForm="ngForm">
+        <div class="form-group">
+          <label for="userName">Username</label>
+          <input id="userName" name="userName" type="text" size="30" pInputText [(ngModel)]="formdata.userName"
+            #userName="ngModel" appDirective01>
+
+          <label for="organisation">Organisation</label>
+          <input id="organisation" name="organisation" type="text" size="30" pInputText
+            [(ngModel)]="formdata.organisation" #userName="ngModel">
+        </div>
+      </form>
+    </p-panel>
+  </div>
+
+  <div class="p-col-6">
+    <app-parent>
+
+      <p-card #projectedCardComponent header="Projected Content">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
+          numquam deserunt
+          quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+          quas!</div>
+          <p-button #projectedButton label="Click"></p-button>
+      </p-card>
+
+    </app-parent>
+  </div>
+
+</div>

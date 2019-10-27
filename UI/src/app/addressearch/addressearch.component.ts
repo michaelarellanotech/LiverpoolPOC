@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { GeofencingService } from '../geofencing/geofencing.service';
 import { AddressSearchResult } from '../geofencing/geofencing.model';
 import { GMap } from 'primeng/primeng';
@@ -14,6 +14,7 @@ export class AddressearchComponent implements OnInit {
 
   defaultLat = -34.22315;
   defaultLng = 150.48798;
+  defaultZoom = 9;
   markerLng = 0;
   markerLat = 0;
 
@@ -4799,6 +4800,8 @@ export class AddressearchComponent implements OnInit {
 
   addressMarker: any;
 
+  blocked: boolean = false;
+
   @ViewChild("gmap") gmap: GMap;
 
   constructor(public geofencingService: GeofencingService) {}
@@ -4806,7 +4809,7 @@ export class AddressearchComponent implements OnInit {
   ngOnInit() {
     this.options = {
       center: {lat: this.defaultLat, lng: this.defaultLng},
-      zoom: 8.5
+      zoom: this.defaultZoom
     };
   
     this.overlays = [
@@ -4831,6 +4834,7 @@ export class AddressearchComponent implements OnInit {
   }
 
   onSelect(event: AddressSearchResult) {
+    this.blocked = true;
     this.geofencingService.getGeocode(event.recordId, event.displayLine).subscribe((data:AddressSearchResult) => {
       
       this.geocodeAddress = new AddressSearchResult();
@@ -4845,17 +4849,41 @@ export class AddressearchComponent implements OnInit {
         this.overlays.push(this.addressMarker);
 
         this.gmap.map.setCenter(new google.maps.LatLng(this.markerLat, this.markerLng));
-
+        this.gmap.map.setZoom(12);
         google.maps.event.trigger(this.gmap.map, "resize");
 
       } 
       else 
       {
-        this.markerLng = 0;
-        this.markerLat = 0;
+        this.clearMap();
       } 
 
       this.completedSearch = true;
+      this.blocked = false;
     });
+  }
+
+  scrollToTop() {
+    window.scrollTo(0,0);
+  }
+
+  clearSearch() {
+    this.completedSearch = false;
+    this.geocodeAddress = new AddressSearchResult();
+    this.address = "";
+    this.clearMap();
+  }
+
+  clearMap() {
+   
+    this.markerLng = 0;
+    this.markerLat = 0;        
+    this.addressMarker = new google.maps.Marker({position: { lat: this.markerLat, lng: this.markerLng }, title: this.geocodeAddress.displayLine});
+    this.overlays.pop();
+    this.overlays.push(this.addressMarker);
+    this.gmap.map.setCenter(new google.maps.LatLng(this.defaultLat, this.defaultLng));
+    this.gmap.map.setZoom(this.defaultZoom);
+    google.maps.event.trigger(this.gmap.map, "resize");
+   
   }
 }
