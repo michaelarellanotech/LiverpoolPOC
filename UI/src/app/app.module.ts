@@ -110,6 +110,7 @@ import {BlockUIModule} from 'primeng/blockui';
 import { Training01Component } from './training01/training01.component';
 import { Directive01Directive } from './training01/directive01.directive';
 import { ParentComponent } from './training01/parent/parent.component';
+import { SurveyComponent } from './survey/survey.component';
 
 @NgModule({
     imports: [
@@ -220,7 +221,8 @@ import { ParentComponent } from './training01/parent/parent.component';
         AddressearchComponent,
         Training01Component,
         Directive01Directive,
-        ParentComponent
+        ParentComponent,
+        SurveyComponent
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

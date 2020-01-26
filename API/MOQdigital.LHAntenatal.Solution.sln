@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOQdigital.LHAntenatal.API", "MOQdigital.LHAntenatal.API\MOQdigital.LHAntenatal.API.csproj", "{3702D9B4-DCFE-497C-ADB0-07254CE2479F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOQdigital.LHAntenatal.DataLayer", "MOQdigital.LHAntenatal.DataLayer\MOQdigital.LHAntenatal.DataLayer.csproj", "{992DA6AA-F05D-4F4A-A790-65300DD0E59D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOQdigital.LHAntenatal.Common", "MOQdigital.LHAntenatal.Common\MOQdigital.LHAntenatal.Common.csproj", "{6017B3D9-B208-4FEF-9C90-63BFF4AE37B5}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MOQdigital.LHAntenatal.DB", "MOQdigital.LHAntenatal.DB\MOQdigital.LHAntenatal.DB.sqlproj", "{36D3F4B0-309E-41DE-8A08-B1E530CEEB97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOQdigital.LHAntenatal.PDF", "..\MOQdigital.LHAntenatal.PDF\MOQdigital.LHAntenatal.PDF.csproj", "{7FEB172F-7015-4689-842D-881DA7CACEDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3702D9B4-DCFE-497C-ADB0-07254CE2479F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3702D9B4-DCFE-497C-ADB0-07254CE2479F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3702D9B4-DCFE-497C-ADB0-07254CE2479F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3702D9B4-DCFE-497C-ADB0-07254CE2479F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992DA6AA-F05D-4F4A-A790-65300DD0E59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992DA6AA-F05D-4F4A-A790-65300DD0E59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992DA6AA-F05D-4F4A-A790-65300DD0E59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992DA6AA-F05D-4F4A-A790-65300DD0E59D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6017B3D9-B208-4FEF-9C90-63BFF4AE37B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6017B3D9-B208-4FEF-9C90-63BFF4AE37B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6017B3D9-B208-4FEF-9C90-63BFF4AE37B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6017B3D9-B208-4FEF-9C90-63BFF4AE37B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D3F4B0-309E-41DE-8A08-B1E530CEEB97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D3F4B0-309E-41DE-8A08-B1E530CEEB97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D3F4B0-309E-41DE-8A08-B1E530CEEB97}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{36D3F4B0-309E-41DE-8A08-B1E530CEEB97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D3F4B0-309E-41DE-8A08-B1E530CEEB97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D3F4B0-309E-41DE-8A08-B1E530CEEB97}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7FEB172F-7015-4689-842D-881DA7CACEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEB172F-7015-4689-842D-881DA7CACEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEB172F-7015-4689-842D-881DA7CACEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEB172F-7015-4689-842D-881DA7CACEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C2107F5-67F3-4C32-B25F-BBED93F5864C}
+	EndGlobalSection
+EndGlobal

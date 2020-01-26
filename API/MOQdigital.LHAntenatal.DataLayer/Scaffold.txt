@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Server=MD-R90Q8NH0\LOCALSQL;Database=Liverpool;User Id=sa;Password=sa;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir TEMP -force -DataAnnotations -usedatabasenames

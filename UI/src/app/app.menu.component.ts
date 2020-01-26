@@ -40,6 +40,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
             { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/']},
             { label: 'Geofencing with Map', icon: 'pi pi-fw pi-globe', routerLink: ['/addresssearch']},
             { label: 'Geofencing no Map', icon: 'pi pi-fw pi-globe', routerLink: ['/geofencing']},
+            { label: 'Survey', icon: 'pi pi-fw pi-globe', routerLink: ['/survey']},
             {
                 label: 'Layouts', icon: 'pi pi-fw pi-th-large',
                 items: [

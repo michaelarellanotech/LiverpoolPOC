@@ -1,0 +1,21 @@
+<div class="p-grid">
+  <p-card header="Language" class="p-col-6">
+    <div>
+      <div class="ui-g" style="width:250px;margin-bottom:10px">
+          <div class="ui-g-12"><p-radioButton name="group1" value="1" label="English" [(ngModel)]="lang" inputId="opt1" (click)="loadData()"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group1" value="2" label="Vietnamese" [(ngModel)]="lang" inputId="opt2" (click)="loadData()"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group1" value="3" label="Arabic" [(ngModel)]="lang" inputId="opt3" (click)="loadData()"></p-radioButton></div>
+          <div class="ui-g-12"><p-radioButton name="group1" value="4" label="Chinese" [(ngModel)]="lang" inputId="opt4" (click)="loadData()"></p-radioButton></div>
+      </div>
+    </div>
+  </p-card>
+
+  <p-card [header]="questionGroupModel.groupDescription" class="p-col-6">
+    <div style="font-size: 18px;" class="ui-rtl" dir="{{ q.rtl ? 'rtl' : '' }}" *ngFor="let q of questionGroupModel.questions; let i = index">
+      <p>
+        {{ q.questionText }}
+        <input type="text" pInputText value="{{ q.questionText }}"/>
+      </p>
+    </div>
+  </p-card>
+</div>

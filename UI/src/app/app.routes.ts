@@ -21,6 +21,7 @@ import { AppLoginComponent } from './pages/app.login.component';
 import { GeofencingComponent } from './geofencing/geofencing.component';
 import { AddressearchComponent } from './addressearch/addressearch.component';
 import { Training01Component } from './training01/training01.component';
+import { SurveyComponent } from './survey/survey.component';
 
 export const routes: Routes = [
     { path: '', component: AppMainComponent,
@@ -40,6 +41,7 @@ export const routes: Routes = [
             { path: 'documentation', component: DocumentationComponent },
             { path: 'geofencing', component: GeofencingComponent },
             { path: 'addresssearch', component: AddressearchComponent },
+            { path: 'survey', component: SurveyComponent },
             { path: 'training01', component: Training01Component }
         ]
     },
