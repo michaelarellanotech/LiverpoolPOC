@@ -23,7 +23,7 @@
     "@angular/router": "~7.1.0",
     "chart.js": "2.7.3",
     "core-js": "^2.5.4",
-    "fullcalendar": "4.0.0-alpha.2",
+    "fullcalendar": "6.0.2",
     "intl": "1.2.5",
     "primeflex": "^1.0.0-rc.1",
     "primeicons": "1.0.0",
